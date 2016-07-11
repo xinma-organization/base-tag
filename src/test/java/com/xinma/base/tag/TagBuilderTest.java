@@ -15,13 +15,13 @@ public class TagBuilderTest {
 		CloudTag cloudTag = builder.nextCloudTag();
 		while (cloudTag != null) {
 			CloudTag decodeTag = TagParser.decodeTagByHiddenCode(cloudTag.getHiddenCode());
-			Assert.assertEquals(cloudTag.getUniqueCode(), decodeTag.getUniqueCode());
+			Assert.assertEquals(cloudTag.getTagId(), decodeTag.getTagId());
 			Assert.assertEquals(cloudTag.getCodeVersion(), decodeTag.getCodeVersion());
 			Assert.assertEquals(cloudTag.getHiddenCode(), decodeTag.getHiddenCode());
 			Assert.assertEquals(cloudTag.getHiddenRandomCode(), decodeTag.getHiddenRandomCode());
 			//System.out.println(cloudTag.getUniqueCode() + "," + cloudTag.getHiddenCode() + "," + cloudTag.getDisplayCode() + "," + cloudTag.getHiddenRandomCode());
 			decodeTag = TagParser.decodeTagByDisplayCode(cloudTag.getDisplayCode());
-			Assert.assertEquals(cloudTag.getUniqueCode(), decodeTag.getUniqueCode());
+			Assert.assertEquals(cloudTag.getTagId(), decodeTag.getTagId());
 			Assert.assertEquals(cloudTag.getCodeVersion(), decodeTag.getCodeVersion());
 			Assert.assertEquals(cloudTag.getDisplayCode(), decodeTag.getDisplayCode());
 			Assert.assertEquals(cloudTag.getDisplayRandomCode(), decodeTag.getDisplayRandomCode());

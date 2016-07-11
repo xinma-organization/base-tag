@@ -124,7 +124,7 @@ public class TagBuilder {
 		
 		CloudTag tag = new CloudTag();
 		tag.setCodeVersion(this.codeVersion);
-		tag.setUniqueCode(getCurrentUniqueCode());
+		tag.setTagId(getCurrentUniqueCode());
 
 		switch (this.codeVersion) {
 			case TagConstants.CODE_VERSION_1:

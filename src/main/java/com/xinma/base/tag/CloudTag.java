@@ -18,7 +18,7 @@ public class CloudTag {
 	/**
 	 * 标签系统唯一码，该码必须系统内唯一，不同version的序列号也不能相同，取值范围0 ~ 2^64
 	 */
-	private Long uniqueCode;
+	private Long tagId;
 	
 	/**
 	 * 系统标签主入口,二维码标签的编码值
@@ -58,12 +58,12 @@ public class CloudTag {
 		this.hiddenRandomCode = hiddenRandomCode;
 	}
 
-	public Long getUniqueCode() {
-		return uniqueCode;
+	public Long getTagId() {
+		return tagId;
 	}
 
-	public void setUniqueCode(Long uniqueCode) {
-		this.uniqueCode = uniqueCode;
+	public void setTagId(Long tagId) {
+		this.tagId = tagId;
 	}
 
 	public String getHiddenCode() {
@@ -91,6 +91,6 @@ public class CloudTag {
 	}
 	
 	public boolean isValid() {
-		return this.uniqueCode != null && this.hiddenRandomCode != null;
+		return this.tagId != null && this.hiddenRandomCode != null;
 	}
 }

@@ -62,7 +62,7 @@ public class TagParser {
 					BigInteger tagIndex = tempCode.xor(randomCode.shiftLeft(14).or(randomCode.and(BigInteger.valueOf(0x3FFF))));
 					
 					cloudTag.setHiddenRandomCode(randomCode.longValue());
-					cloudTag.setUniqueCode(tagIndex.longValue());
+					cloudTag.setTagId(tagIndex.longValue());
 				} else {
 					throw new Exception("hiddenCode : "  + hiddenCode +  " bcc byte code error.");
 				}
@@ -97,7 +97,7 @@ public class TagParser {
 				.or(randomCode.and(BigInteger.valueOf(0x3FF))));
 		
 		cloudTag.setDisplayRandomCode(randomCode.longValue());
-		cloudTag.setUniqueCode(tempCode.longValue());
+		cloudTag.setTagId(tempCode.longValue());
 			
 
 		return cloudTag;
