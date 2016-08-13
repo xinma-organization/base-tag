@@ -48,7 +48,8 @@ public class TagConstants {
 	protected static final BigInteger codeTable36Length = BigInteger.valueOf(36);
 	protected static final BigInteger codeTable40Length = BigInteger.valueOf(40);
 
-
+	// 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$-_+!*'(),.
+	
 	/**
 	 * 该字符表用于纯数字格式字符串编码
 	 */
@@ -66,7 +67,7 @@ public class TagConstants {
 	 */
 	protected static final char codeTable40[] = { 'C', '5', 'K', 'Y', 'G', 'R', 'F', 'E', 'T', '6', 'V',
 			'*', 'H', 'Q', '1', 'B', 'A', '4', '0', '9', 'X', 'U', '8', '-', 'P', 'W', '7', 'D', 'I',
-			'.', 'L', 'Z', '$', 'O', 'J', 'N', '2', 'M', 'S', '3' };
+			'!', 'L', 'Z', '$', 'O', 'J', 'N', '2', 'M', 'S', '3' };
 
 	/**
 	 * 查找某一字符在对应字符表的索引值
